@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <div class="col-md-12">
+    <div class="card card-registro">
+      <form class="col-md-12" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="data.nombre"
+            name="nombre"
+            id="nombre"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            name="apellidos"
+            id="apellidos"
+            [(ngModel)]="data.apellidos"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo</label>
+          <input
+            type="email"
+            class="form-control"
+            name="correo"
+            id="correo"
+            [(ngModel)]="data.correo"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            [(ngModel)]="data.password"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password2" class="form-label">Repetir contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password2"
+            id="password2"
+            [(ngModel)]="data.password2"
+            required
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="check_politicas"
+            name="check_politicas"
+            [(ngModel)]="data.politicas"
+          />
+          <label class="form-check-label" for="check_politicas"
+            >Estoy de acuerdo con las políticas</label
+          >
+        </div>
+        <button type="submit" class="btn btn-success col-md-12">Empezar</button>
+      </form>
+    </div>
+  </div>
+</div>

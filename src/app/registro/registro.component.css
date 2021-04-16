@@ -1,0 +1,11 @@
+form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-registro {
+  max-width: 30rem;
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}

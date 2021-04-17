@@ -1,11 +1,7 @@
 <div class="container mt-5">
   <div class="col-md-12">
     <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-      <div
-        class="card card-pregunta"
-        style="width: 18rem"
-        *ngFor="let pregunta of preguntas"
-      >
+      <div class="card card-pregunta" *ngFor="let pregunta of preguntas">
         <div class="card-body">
           <h5 class="card-title">{{ pregunta.pregunta }}</h5>
 

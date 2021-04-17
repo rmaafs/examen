@@ -17,7 +17,11 @@
           certificado en la materia de<br />
           <b>Angular</b><br />
           en la fecha de
-          <i>{{ date | date }}</i>
+          <i>{{ date | date }}</i
+          ><br /><br />
+          Se envió a tu correo <b>{{ usuario.correo }}</b
+          ><br />
+          tu certificado en formato PDF.
         </p>
         <a href="#" class="btn btn-success col-md-12" [routerLink]="['/']"
           >Gracias</a

@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="col-md-12">
+    <div class="card card-resultados">
+      <img src="../assets/img/angular.png" class="card-img-top" alt="..." />
+      <div class="card-body" *ngIf="resultados.calif >= 8; else reprobado">
+        <h5 class="card-title">Felicidades {{ usuario.nombre }}</h5>
+        <p class="card-text">
+          Tu calificación fue de <b>{{ resultados.calif }}</b
+          >.<br />
+          Obtuviste
+          <b>{{ resultados.bien }}</b> respuestas correctas de
+          <b>{{ resultados.numPreguntas }}</b
+          >.<br /><br />
+          A nombre de este proyecto, declaro a<br />
+          <b>{{ usuario.nombre }} {{ usuario.apellidos }}</b
+          ><br />
+          certificado en la materia de<br />
+          <b>Angular</b><br />
+          en la fecha de
+          <i>{{ date | date }}</i>
+        </p>
+        <a href="#" class="btn btn-success col-md-12" [routerLink]="['/']"
+          >Gracias</a
+        >
+      </div>
+
+      <ng-template #reprobado>
+        <div class="card-body">
+          <h5 class="card-title">Lo sentimos, {{ usuario.nombre }}</h5>
+          <p class="card-text">
+            Tu calificación fue de <b>{{ resultados.calif }}</b
+            >.<br />
+            Obtuviste
+            <b>{{ resultados.bien }}</b> respuestas correctas de
+            <b>{{ resultados.numPreguntas }}</b
+            >.<br /><br />
+            Sigue estudiando para que puedas certificarte.
+          </p>
+          <a
+            href="#"
+            class="btn btn-success col-md-12"
+            [routerLink]="['/examen']"
+            >Volver a intentar</a
+          >
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

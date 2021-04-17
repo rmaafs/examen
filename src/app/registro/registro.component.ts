@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -17,7 +18,7 @@ export class RegistroComponent implements OnInit {
     politicas: false,
   };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -50,6 +51,8 @@ export class RegistroComponent implements OnInit {
     } else if (!validateEmail(this.data.correo)) {
       error('El correo no es válido');
     } else {
+      localStorage.setItem('data', JSON.stringify(this.data));
+      this.router.navigate(['examen']);
     }
   }
 }

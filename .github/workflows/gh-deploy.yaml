@@ -27,9 +27,6 @@ jobs:
         - name: Install dependencies
           run: |
             npm install
-        - name: Unit Test
-          run: |
-            npm test
         - name: Build proyect
           env:
             CI: false
